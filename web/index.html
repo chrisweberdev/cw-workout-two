@@ -34,8 +34,62 @@
 
   <title>CW Hybrid Training</title>
   <link rel="manifest" href="manifest.json">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+    }
+    .loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #ff6b35;
+    }
+    .loading-spinner {
+      width: 50px;
+      height: 50px;
+      border: 4px solid #333;
+      border-top: 4px solid #ff6b35;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-bottom: 20px;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
 </head>
 <body>
-  <script src="flutter_bootstrap.js" async></script>
+  <div class="loading" id="loading">
+    <div class="loading-spinner"></div>
+    <div>Loading CW Hybrid...</div>
+  </div>
+
+  <script>
+    {{flutter_js}}
+    {{flutter_build_config}}
+
+    _flutter.loader.load({
+      onEntrypointLoaded: async function(engineInitializer) {
+        // Use HTML renderer on mobile for better compatibility
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+        let appRunner = await engineInitializer.initializeEngine({
+          renderer: isMobile ? "html" : "canvaskit",
+        });
+
+        // Hide loading indicator
+        document.getElementById('loading').style.display = 'none';
+
+        await appRunner.runApp();
+      }
+    });
+  </script>
 </body>
 </html>
