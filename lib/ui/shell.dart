@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import '../data/repository.dart';
 import 'dashboard_screen.dart';
 import 'history_screen.dart';
@@ -7,7 +6,8 @@ import 'feedback_screen.dart';
 import 'settings_screen.dart';
 
 class AppShell extends StatefulWidget {
-  const AppShell({super.key});
+  final Repository repository;
+  const AppShell({super.key, required this.repository});
 
   @override
   State<AppShell> createState() => _AppShellState();
@@ -18,13 +18,11 @@ class _AppShellState extends State<AppShell> {
 
   @override
   Widget build(BuildContext context) {
-    final repository = Provider.of<Repository>(context, listen: false);
-
     final screens = [
-      DashboardScreen(repository: repository),
-      HistoryScreen(repository: repository),
-      FeedbackScreen(repository: repository),
-      SettingsScreen(repository: repository),
+      DashboardScreen(repository: widget.repository),
+      HistoryScreen(repository: widget.repository),
+      FeedbackScreen(repository: widget.repository),
+      SettingsScreen(repository: widget.repository),
     ];
 
     return Scaffold(

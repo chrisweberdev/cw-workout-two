@@ -122,7 +122,7 @@ class _HiitLogScreenState extends State<HiitLogScreen> {
         subtitle: Text(
           '${_selectedDate.day}/${_selectedDate.month}/${_selectedDate.year}',
           style: theme.textTheme.bodySmall?.copyWith(
-            color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+            color: theme.colorScheme.onSurface.withOpacity(0.6),
           ),
         ),
         trailing: TextButton(
@@ -182,7 +182,7 @@ class _HiitLogScreenState extends State<HiitLogScreen> {
                     color: theme.colorScheme.surfaceContainerHighest,
                     borderRadius: BorderRadius.circular(12),
                     border: Border.all(
-                      color: theme.colorScheme.outline.withValues(alpha: 0.3),
+                      color: theme.colorScheme.outline.withOpacity(0.3),
                       width: 2,
                       strokeAlign: BorderSide.strokeAlignInside,
                     ),
@@ -269,7 +269,7 @@ class _HiitLogScreenState extends State<HiitLogScreen> {
             Text(
               'Quick add HYROX stations:',
               style: theme.textTheme.bodySmall?.copyWith(
-                color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+                color: theme.colorScheme.onSurface.withOpacity(0.6),
               ),
             ),
             const SizedBox(height: 8),
@@ -477,7 +477,7 @@ class _HiitLogScreenState extends State<HiitLogScreen> {
                 Text(
                   _getRpeDescription(_rpe),
                   style: theme.textTheme.bodySmall?.copyWith(
-                    color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+                    color: theme.colorScheme.onSurface.withOpacity(0.6),
                   ),
                 ),
               ],
@@ -501,7 +501,7 @@ class _HiitLogScreenState extends State<HiitLogScreen> {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
       decoration: BoxDecoration(
-        color: color.withValues(alpha: 0.2),
+        color: color.withOpacity(0.2),
         borderRadius: BorderRadius.circular(8),
       ),
       child: Text(

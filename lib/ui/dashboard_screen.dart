@@ -96,7 +96,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 Text(
                   _getWeekRange(monday),
                   style: theme.textTheme.bodySmall?.copyWith(
-                    color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+                    color: theme.colorScheme.onSurface.withOpacity(0.6),
                   ),
                 ),
               ],
@@ -160,7 +160,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
         Text(
           dayName,
           style: theme.textTheme.bodySmall?.copyWith(
-            color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+            color: theme.colorScheme.onSurface.withOpacity(0.6),
             fontWeight: isToday ? FontWeight.bold : null,
           ),
         ),
@@ -176,7 +176,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             border: isToday
                 ? null
                 : Border.all(
-                    color: theme.colorScheme.outline.withValues(alpha: 0.2),
+                    color: theme.colorScheme.outline.withOpacity(0.2),
                   ),
           ),
           child: Center(
@@ -286,7 +286,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
         Text(
           label,
           style: theme.textTheme.bodySmall?.copyWith(
-            color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+            color: theme.colorScheme.onSurface.withOpacity(0.6),
           ),
         ),
       ],
@@ -395,7 +395,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
         Text(
           label,
           style: theme.textTheme.bodySmall?.copyWith(
-            color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+            color: theme.colorScheme.onSurface.withOpacity(0.6),
           ),
         ),
       ],
@@ -454,8 +454,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
               colors: [
-                color.withValues(alpha: 0.1),
-                color.withValues(alpha: 0.05),
+                color.withOpacity(0.1),
+                color.withOpacity(0.05),
               ],
             ),
           ),
@@ -491,8 +491,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
               colors: [
-                Colors.purple.withValues(alpha: 0.1),
-                Colors.purple.withValues(alpha: 0.05),
+                Colors.purple.withOpacity(0.1),
+                Colors.purple.withOpacity(0.05),
               ],
             ),
           ),
@@ -557,7 +557,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     Text(
                       _formatDate(latestFeedback.receivedAt),
                       style: theme.textTheme.bodySmall?.copyWith(
-                        color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+                        color: theme.colorScheme.onSurface.withOpacity(0.6),
                       ),
                     ),
                   ],

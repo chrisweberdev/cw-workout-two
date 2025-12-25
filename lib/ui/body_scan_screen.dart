@@ -210,7 +210,7 @@ class _BodyScanScreenState extends State<BodyScanScreen> {
             Text(
               'Optional - from InBody or similar scanner',
               style: theme.textTheme.bodySmall?.copyWith(
-                color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+                color: theme.colorScheme.onSurface.withOpacity(0.6),
               ),
             ),
             const SizedBox(height: 16),
@@ -263,7 +263,7 @@ class _BodyScanScreenState extends State<BodyScanScreen> {
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: theme.colorScheme.primaryContainer.withValues(alpha: 0.3),
+        color: theme.colorScheme.primaryContainer.withOpacity(0.3),
         borderRadius: BorderRadius.circular(8),
       ),
       child: Row(
@@ -289,7 +289,7 @@ class _BodyScanScreenState extends State<BodyScanScreen> {
         Text(
           label,
           style: theme.textTheme.bodySmall?.copyWith(
-            color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+            color: theme.colorScheme.onSurface.withOpacity(0.6),
           ),
         ),
       ],
@@ -327,7 +327,7 @@ class _BodyScanScreenState extends State<BodyScanScreen> {
               Text(
                 'Optional - detailed muscle mass by region',
                 style: theme.textTheme.bodySmall?.copyWith(
-                  color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+                  color: theme.colorScheme.onSurface.withOpacity(0.6),
                 ),
               ),
               const SizedBox(height: 16),
@@ -405,7 +405,7 @@ class _BodyScanScreenState extends State<BodyScanScreen> {
                 Text(
                   _formatDate(lastScan.date),
                   style: theme.textTheme.bodySmall?.copyWith(
-                    color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+                    color: theme.colorScheme.onSurface.withOpacity(0.6),
                   ),
                 ),
               ],
@@ -478,7 +478,7 @@ class _BodyScanScreenState extends State<BodyScanScreen> {
         Text(
           label,
           style: theme.textTheme.bodySmall?.copyWith(
-            color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+            color: theme.colorScheme.onSurface.withOpacity(0.6),
           ),
         ),
       ],
@@ -550,7 +550,7 @@ class _BodyScanScreenState extends State<BodyScanScreen> {
                     width: 40,
                     height: 4,
                     decoration: BoxDecoration(
-                      color: theme.colorScheme.onSurface.withValues(alpha: 0.2),
+                      color: theme.colorScheme.onSurface.withOpacity(0.2),
                       borderRadius: BorderRadius.circular(2),
                     ),
                   ),

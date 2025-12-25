@@ -80,7 +80,7 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
             Text(
               'Workouts per week by type',
               style: theme.textTheme.bodySmall?.copyWith(
-                color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+                color: theme.colorScheme.onSurface.withOpacity(0.6),
               ),
             ),
             const SizedBox(height: 24),
@@ -204,7 +204,7 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
             Text(
               'Total kg lifted per week',
               style: theme.textTheme.bodySmall?.copyWith(
-                color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+                color: theme.colorScheme.onSurface.withOpacity(0.6),
               ),
             ),
             const SizedBox(height: 24),
@@ -264,7 +264,7 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
                             dotData: const FlDotData(show: true),
                             belowBarData: BarAreaData(
                               show: true,
-                              color: theme.colorScheme.primary.withValues(alpha: 0.1),
+                              color: theme.colorScheme.primary.withOpacity(0.1),
                             ),
                           ),
                         ],
@@ -296,7 +296,7 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
             Text(
               'Kilometers per week',
               style: theme.textTheme.bodySmall?.copyWith(
-                color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+                color: theme.colorScheme.onSurface.withOpacity(0.6),
               ),
             ),
             const SizedBox(height: 24),
@@ -356,7 +356,7 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
                             dotData: const FlDotData(show: true),
                             belowBarData: BarAreaData(
                               show: true,
-                              color: theme.colorScheme.secondary.withValues(alpha: 0.1),
+                              color: theme.colorScheme.secondary.withOpacity(0.1),
                             ),
                           ),
                         ],
@@ -388,7 +388,7 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
             Text(
               'Weekly average perceived exertion',
               style: theme.textTheme.bodySmall?.copyWith(
-                color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+                color: theme.colorScheme.onSurface.withOpacity(0.6),
               ),
             ),
             const SizedBox(height: 24),
@@ -480,7 +480,7 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
             Text(
               'Last $_selectedWeeks weeks',
               style: theme.textTheme.bodySmall?.copyWith(
-                color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+                color: theme.colorScheme.onSurface.withOpacity(0.6),
               ),
             ),
             const SizedBox(height: 16),
@@ -526,7 +526,7 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
               Text(
                 label,
                 style: theme.textTheme.bodySmall?.copyWith(
-                  color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+                  color: theme.colorScheme.onSurface.withOpacity(0.6),
                 ),
               ),
             ],
@@ -562,13 +562,13 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
           Icon(
             Icons.bar_chart,
             size: 48,
-            color: theme.colorScheme.onSurface.withValues(alpha: 0.2),
+            color: theme.colorScheme.onSurface.withOpacity(0.2),
           ),
           const SizedBox(height: 8),
           Text(
             'No data yet',
             style: theme.textTheme.bodyMedium?.copyWith(
-              color: theme.colorScheme.onSurface.withValues(alpha: 0.4),
+              color: theme.colorScheme.onSurface.withOpacity(0.4),
             ),
           ),
         ],

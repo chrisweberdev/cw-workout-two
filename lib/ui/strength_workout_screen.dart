@@ -190,7 +190,7 @@ class _StrengthWorkoutScreenState extends State<StrengthWorkoutScreen> {
                   height: 40,
                   decoration: BoxDecoration(
                     color: allCompleted
-                        ? Colors.green.withValues(alpha: 0.2)
+                        ? Colors.green.withOpacity(0.2)
                         : theme.colorScheme.primaryContainer,
                     borderRadius: BorderRadius.circular(8),
                   ),
@@ -214,7 +214,7 @@ class _StrengthWorkoutScreenState extends State<StrengthWorkoutScreen> {
                       Text(
                         '$completedSets / ${record.sets.length} sets',
                         style: theme.textTheme.bodySmall?.copyWith(
-                          color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+                          color: theme.colorScheme.onSurface.withOpacity(0.6),
                         ),
                       ),
                     ],
@@ -262,7 +262,7 @@ class _StrengthWorkoutScreenState extends State<StrengthWorkoutScreen> {
             height: 32,
             decoration: BoxDecoration(
               color: isCompleted
-                  ? Colors.green.withValues(alpha: 0.2)
+                  ? Colors.green.withOpacity(0.2)
                   : theme.colorScheme.surfaceContainerHighest,
               borderRadius: BorderRadius.circular(8),
             ),
@@ -313,7 +313,7 @@ class _StrengthWorkoutScreenState extends State<StrengthWorkoutScreen> {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
               decoration: BoxDecoration(
-                color: Colors.green.withValues(alpha: 0.2),
+                color: Colors.green.withOpacity(0.2),
                 borderRadius: BorderRadius.circular(4),
               ),
               child: Text(
@@ -374,7 +374,7 @@ class _StrengthWorkoutScreenState extends State<StrengthWorkoutScreen> {
             Text(
               label,
               style: theme.textTheme.bodySmall?.copyWith(
-                color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+                color: theme.colorScheme.onSurface.withOpacity(0.6),
               ),
             ),
           ],
@@ -422,7 +422,7 @@ class _StrengthWorkoutScreenState extends State<StrengthWorkoutScreen> {
             Text(
               _getRpeDescription(_rpe),
               style: theme.textTheme.bodySmall?.copyWith(
-                color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+                color: theme.colorScheme.onSurface.withOpacity(0.6),
               ),
             ),
             const SizedBox(height: 24),
@@ -471,7 +471,7 @@ class _StrengthWorkoutScreenState extends State<StrengthWorkoutScreen> {
             Text(
               'These questions will be included when you sync with your AI coach.',
               style: theme.textTheme.bodySmall?.copyWith(
-                color: theme.colorScheme.onSurface.withValues(alpha: 0.5),
+                color: theme.colorScheme.onSurface.withOpacity(0.5),
                 fontStyle: FontStyle.italic,
               ),
             ),
@@ -494,7 +494,7 @@ class _StrengthWorkoutScreenState extends State<StrengthWorkoutScreen> {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
       decoration: BoxDecoration(
-        color: color.withValues(alpha: 0.2),
+        color: color.withOpacity(0.2),
         borderRadius: BorderRadius.circular(8),
       ),
       child: Text(
@@ -514,7 +514,7 @@ class _StrengthWorkoutScreenState extends State<StrengthWorkoutScreen> {
         color: theme.colorScheme.surface,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.1),
+            color: Colors.black.withOpacity(0.1),
             blurRadius: 8,
             offset: const Offset(0, -2),
           ),
@@ -538,7 +538,7 @@ class _StrengthWorkoutScreenState extends State<StrengthWorkoutScreen> {
                   Text(
                     '${_session.totalSets} sets • ${_session.totalReps} reps',
                     style: theme.textTheme.bodySmall?.copyWith(
-                      color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+                      color: theme.colorScheme.onSurface.withOpacity(0.6),
                     ),
                   ),
                 ],

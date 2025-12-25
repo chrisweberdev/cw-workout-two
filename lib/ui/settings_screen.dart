@@ -94,7 +94,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     Text(
                       'Last sync: ${_formatDateTime(settings.lastSyncTime!)}',
                       style: theme.textTheme.bodySmall?.copyWith(
-                        color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+                        color: theme.colorScheme.onSurface.withOpacity(0.6),
                       ),
                     ),
                   ],
@@ -142,7 +142,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   Text(
                     'Create a fine-grained PAT with Contents read/write permission for this repo only.',
                     style: theme.textTheme.bodySmall?.copyWith(
-                      color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+                      color: theme.colorScheme.onSurface.withOpacity(0.6),
                     ),
                   ),
                   const SizedBox(height: 16),
@@ -179,7 +179,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   Text(
                     'Link to your ChatGPT Custom GPT for quick access after syncing.',
                     style: theme.textTheme.bodySmall?.copyWith(
-                      color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+                      color: theme.colorScheme.onSurface.withOpacity(0.6),
                     ),
                   ),
                   const SizedBox(height: 16),
@@ -223,7 +223,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   Text(
                     'Set your planned workout type for each day of the week.',
                     style: theme.textTheme.bodySmall?.copyWith(
-                      color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+                      color: theme.colorScheme.onSurface.withOpacity(0.6),
                     ),
                   ),
                   const SizedBox(height: 16),
@@ -277,14 +277,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   Text(
                     'Version 1.0.0',
                     style: theme.textTheme.bodyMedium?.copyWith(
-                      color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+                      color: theme.colorScheme.onSurface.withOpacity(0.6),
                     ),
                   ),
                   const SizedBox(height: 8),
                   Text(
                     'Hybrid training tracker with GPT coaching for HYROX athletes.',
                     style: theme.textTheme.bodySmall?.copyWith(
-                      color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+                      color: theme.colorScheme.onSurface.withOpacity(0.6),
                     ),
                   ),
                 ],
@@ -669,7 +669,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             Text(
               'Existing data will be preserved. Duplicate IDs will be skipped.',
               style: theme.textTheme.bodySmall?.copyWith(
-                color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+                color: theme.colorScheme.onSurface.withOpacity(0.6),
               ),
             ),
           ],

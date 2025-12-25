@@ -83,11 +83,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider<ThemeManager>.value(value: themeManager),
-        Provider<Repository>.value(value: repository),
-      ],
+    return ChangeNotifierProvider<ThemeManager>(
+      create: (_) => themeManager,
       child: Consumer<ThemeManager>(
         builder: (context, themeManager, child) {
           return MaterialApp(
@@ -96,7 +93,7 @@ class MyApp extends StatelessWidget {
             theme: _buildLightTheme(),
             darkTheme: _buildDarkTheme(),
             themeMode: themeManager.themeMode,
-            home: const AppShell(),
+            home: AppShell(repository: repository),
           );
         },
       ),

@@ -81,20 +81,20 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
           Icon(
             Icons.smart_toy_outlined,
             size: 64,
-            color: theme.colorScheme.onSurface.withValues(alpha: 0.3),
+            color: theme.colorScheme.onSurface.withOpacity(0.3),
           ),
           const SizedBox(height: 16),
           Text(
             'No AI feedback yet',
             style: theme.textTheme.titleMedium?.copyWith(
-              color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+              color: theme.colorScheme.onSurface.withOpacity(0.6),
             ),
           ),
           const SizedBox(height: 8),
           Text(
             'Complete a workout and sync to get coaching feedback',
             style: theme.textTheme.bodyMedium?.copyWith(
-              color: theme.colorScheme.onSurface.withValues(alpha: 0.4),
+              color: theme.colorScheme.onSurface.withOpacity(0.4),
             ),
             textAlign: TextAlign.center,
           ),
@@ -126,7 +126,7 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
                     child: Text(
                       _formatDate(feedback.receivedAt),
                       style: theme.textTheme.bodySmall?.copyWith(
-                        color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+                        color: theme.colorScheme.onSurface.withOpacity(0.6),
                       ),
                     ),
                   ),
@@ -234,7 +234,7 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       decoration: BoxDecoration(
-        color: color.withValues(alpha: 0.1),
+        color: color.withOpacity(0.1),
         borderRadius: BorderRadius.circular(8),
       ),
       child: Row(
@@ -450,7 +450,7 @@ class _FeedbackDetailScreenState extends State<FeedbackDetailScreen> {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                   decoration: BoxDecoration(
-                    color: statusColor.withValues(alpha: 0.1),
+                    color: statusColor.withOpacity(0.1),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Text(
@@ -469,7 +469,7 @@ class _FeedbackDetailScreenState extends State<FeedbackDetailScreen> {
             Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: theme.colorScheme.primaryContainer.withValues(alpha: 0.3),
+                color: theme.colorScheme.primaryContainer.withOpacity(0.3),
                 borderRadius: BorderRadius.circular(8),
               ),
               child: Row(
@@ -484,7 +484,7 @@ class _FeedbackDetailScreenState extends State<FeedbackDetailScreen> {
                       Text(
                         'Current',
                         style: theme.textTheme.bodySmall?.copyWith(
-                          color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+                          color: theme.colorScheme.onSurface.withOpacity(0.6),
                         ),
                       ),
                     ],
@@ -508,7 +508,7 @@ class _FeedbackDetailScreenState extends State<FeedbackDetailScreen> {
                       Text(
                         'Suggested',
                         style: theme.textTheme.bodySmall?.copyWith(
-                          color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
+                          color: theme.colorScheme.onSurface.withOpacity(0.6),
                         ),
                       ),
                     ],
@@ -517,7 +517,7 @@ class _FeedbackDetailScreenState extends State<FeedbackDetailScreen> {
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                     decoration: BoxDecoration(
-                      color: Colors.green.withValues(alpha: 0.2),
+                      color: Colors.green.withOpacity(0.2),
                       borderRadius: BorderRadius.circular(4),
                     ),
                     child: Text(
@@ -547,7 +547,7 @@ class _FeedbackDetailScreenState extends State<FeedbackDetailScreen> {
               suggestion.rationale,
               style: theme.textTheme.bodyMedium?.copyWith(
                 fontStyle: FontStyle.italic,
-                color: theme.colorScheme.onSurface.withValues(alpha: 0.8),
+                color: theme.colorScheme.onSurface.withOpacity(0.8),
               ),
             ),
 
