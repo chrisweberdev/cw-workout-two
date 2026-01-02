@@ -7,6 +7,7 @@ import 'package:file_picker/file_picker.dart';
 import '../data/repository.dart';
 import '../theme/theme_manager.dart';
 import '../models/strength_session.dart';
+import 'exercises_screen.dart';
 import '../models/running_session.dart';
 import '../models/hiit_session.dart';
 import '../models/body_scan.dart';
@@ -208,6 +209,26 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   themeManager.toggleTheme();
                 },
               ),
+            ),
+          ),
+          const SizedBox(height: 24),
+
+          // Exercises Management Section
+          _buildSectionHeader(theme, 'Exercises', Icons.fitness_center),
+          Card(
+            child: ListTile(
+              leading: const Icon(Icons.edit_note),
+              title: const Text('Manage Exercises'),
+              subtitle: const Text('Add, edit, or delete exercises'),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ExercisesScreen(repository: widget.repository),
+                  ),
+                );
+              },
             ),
           ),
           const SizedBox(height: 24),

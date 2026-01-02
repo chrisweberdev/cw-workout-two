@@ -96,6 +96,14 @@ class Repository {
     await _exercisesBox.put(exercise.id, exercise);
   }
 
+  Future<void> deleteExercise(String id) async {
+    await _exercisesBox.delete(id);
+  }
+
+  Future<void> deleteCategory(String id) async {
+    await _categoriesBox.delete(id);
+  }
+
   // ============ Plans ============
 
   List<Plan> getAllPlans() {
